@@ -13,3 +13,4 @@ Any UI change that is not yet what he should look at needs a clickable live prev
 - Once the public host is the thing to look at: [https://humanehealth.devoutshaman.com](https://humanehealth.devoutshaman.com).
 - He walks `/` and the five desks: `/ops/wellness`, `/ops/diagnostic`, `/ops/unnaturalfertility`, `/ops/cosmetic`, `/ops/stimulants`.
 - Code publishes through GitHub to `main`, then that host. Cloud Run `humanehealth-web`, project `devo-holding`, region `us-west1`. DNS is already a CNAME to `ghs.googlehosted.com`. Do not change Cloudflare. Do not add DNS. No throwaway host. No new pull request unless a real code change needs one.
+- When Devo says a UI is good and says push, ship that exact UI to GitHub `main`. Do not restyle it. Do not open a new agent. Do not change DNS. `main` already serves [https://humanehealth.devoutshaman.com](https://humanehealth.devoutshaman.com). No throwaway host.
