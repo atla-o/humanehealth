@@ -20,7 +20,6 @@ export default function HomePage() {
               <h3>
                 <strong>{desk.name}</strong>
               </h3>
-              <p>{desk.summary}</p>
             </Link>
           </li>
         ))}

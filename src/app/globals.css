@@ -35,6 +35,11 @@ body {
   flex-direction: column;
 }
 
+body:has(.home) {
+  height: 100dvh;
+  overflow: hidden;
+}
+
 a {
   color: inherit;
 }
@@ -70,18 +75,52 @@ main {
   flex: 1;
   display: flex;
   flex-direction: column;
+  min-height: 0;
   padding-bottom: 2.5rem;
+}
+
+body:has(.home) main {
+  padding-bottom: 0.6rem;
 }
 
 .home {
   flex: 1;
   display: flex;
   flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.home h1 {
+  margin: 0 0 0.35rem;
 }
 
 .home .list {
   flex: 1;
-  align-content: center;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.home .list > li {
+  flex: 1 1 0;
+  min-height: 0;
+  display: flex;
+}
+
+.home .card {
+  padding: 0.2rem 0.7rem;
+}
+
+.home .card h3 {
+  margin: 0;
+}
+
+.home .desk-link {
+  flex: 1;
+  min-height: 0;
 }
 
 footer {
