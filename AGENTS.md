@@ -15,7 +15,7 @@ Publisher: **atla-o**. Parent: Devo Holdings. Public GitHub: [github.com/atla-o/
 
 There is no production host for this hub yet. Do not invent one (`humanehealth.devoutshaman.com` is not a host). GCP project, when a human later deploys, is `devo-holding` (`us-west1`). Cloudflare stays DNS-only. No Workers. No Pages. No Firebase.
 
-Dev server: `npm run dev` → port **43181**.
+Dev server: `npm run dev` → port **43181**. `next.config.ts` allows `127.0.0.1` and `*.trycloudflare.com` so a quick tunnel can load the client bundle. Without that, the preview is unhydrated HTML and desk submits do nothing.
 
 ## Nest map
 
