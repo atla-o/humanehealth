@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import Link from "next/link";
 import type { ReactNode } from "react";
 import "./globals.css";
 
@@ -26,14 +25,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           Skip to content
         </a>
         <header>
-          <Link className="mark" href="/">
-            Humanehealth
-          </Link>
+          <a className="mark" href="https://devoutshaman.com">
+            o
+          </a>
         </header>
         <main id="content">{children}</main>
-        <footer>
-          <p>Humanehealth · Devo clinic network · publisher atla-o</p>
-        </footer>
       </body>
     </html>
   );

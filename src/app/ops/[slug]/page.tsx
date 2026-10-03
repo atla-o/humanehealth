@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { DeskForm } from "@/app/ops/[slug]/desk-form";
 import { getDesk } from "@/lib/nest";
@@ -29,9 +28,6 @@ export default async function DeskPage({ params, searchParams }: PageProps) {
 
   return (
     <>
-      <p className="kicker">
-        <Link href="/">Humanehealth</Link>
-      </p>
       <h1>{desk.name}</h1>
       <p className="lede">{desk.summary}</p>
       <DeskForm slug={slug} whenRequired={desk.whenRequired} error={error} saved={saved} />
