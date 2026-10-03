@@ -57,6 +57,7 @@ main {
 
 header {
   padding-block: 1.25rem 0.5rem;
+  text-align: center;
 }
 
 .mark {
@@ -67,7 +68,20 @@ header {
 
 main {
   flex: 1;
+  display: flex;
+  flex-direction: column;
   padding-bottom: 2.5rem;
+}
+
+.home {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.home .list {
+  flex: 1;
+  align-content: center;
 }
 
 footer {
@@ -141,7 +155,10 @@ section {
 }
 
 .desk-link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 3.25rem;
   text-decoration: none;
 }
 
