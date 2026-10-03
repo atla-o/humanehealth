@@ -11,7 +11,6 @@ The agent handles code. Devo handles the human UI himself and reiterates it. Do 
    - Before it is on the public host: a Cursor preview link to the real Next server of that working tree (preview tunnel or `cloudflared`), at the top of the PR description and in a PR comment.
    - Once the public host is the thing to look at: [https://humanehealth.devoutshaman.com](https://humanehealth.devoutshaman.com).
 3. **Code publishes through GitHub to `main`, then that existing host.** No throwaway host. No new pull request unless a real code change needs one.
-4. **When Devo says a UI is good and says push, ship that exact UI to GitHub `main`.** Do not restyle it. Do not open a new agent. Do not change DNS. `main` already serves [https://humanehealth.devoutshaman.com](https://humanehealth.devoutshaman.com). No throwaway host.
 
 Publisher: **atla-o**. Parent: Devo Holdings. Public GitHub: [github.com/atla-o/humanehealth](https://github.com/atla-o/humanehealth).
 
