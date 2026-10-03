@@ -5,10 +5,11 @@ alwaysApply: true
 
 # Live UI preview
 
-UI that is not on `main` still needs a live clickable preview before review or merge. Screenshots are not enough.
+The agent handles code. Devo handles the human UI himself and reiterates it. Do not restyle UI he will fix.
 
-- Run the real Next server of that working tree (`npm run dev`, port 43181).
-- Post the exact URL at the top of the PR description and in a PR comment. Cursor preview tunnel, cloudflared quick tunnel, or similar.
-- The human walks `/` and the five desks: `/ops/wellness`, `/ops/diagnostic`, `/ops/unnaturalfertility`, `/ops/cosmetic`, `/ops/stimulants`.
-- Do not invent a production host. This hub has none yet.
-- Do not merge. Do not deploy until Devo says merge and deploy.
+Any UI change that is not yet what he should look at needs a clickable live preview he can open. Screenshots are not enough.
+
+- Before it is on the public host: run the real Next server (`npm run dev`, port 43181) and put the Cursor preview link (or cloudflared tunnel) at the top of the PR description and in a PR comment.
+- Once the public host is the thing to look at: [https://humanehealth.devoutshaman.com](https://humanehealth.devoutshaman.com).
+- He walks `/` and the five desks: `/ops/wellness`, `/ops/diagnostic`, `/ops/unnaturalfertility`, `/ops/cosmetic`, `/ops/stimulants`.
+- Code publishes through GitHub to `main`, then that host. Cloud Run `humanehealth-web`, project `devo-holding`, region `us-west1`. DNS is already a CNAME to `ghs.googlehosted.com`. Do not change Cloudflare. Do not add DNS. No throwaway host. No new pull request unless a real code change needs one.

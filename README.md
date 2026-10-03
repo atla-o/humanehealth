@@ -13,4 +13,4 @@ npm run dev
 
 The dev server listens on port 43181. `GET /api/nest` returns the nest map. Each desk is `GET` and `POST /api/desk/[slug]`.
 
-No production host yet. Do not invent one. Merge and deploy only when Devo says so.
+Public host: [https://humanehealth.devoutshaman.com](https://humanehealth.devoutshaman.com). Cloud Run service `humanehealth-web` in project `devo-holding`, region `us-west1`. DNS is a CNAME to `ghs.googlehosted.com`. Code publishes through GitHub to `main`, then that host.
