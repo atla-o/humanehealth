@@ -9,5 +9,6 @@ UI that is not on `main` still needs a live clickable preview before review or m
 
 - Run the real Next server of that working tree (`npm run dev`, port 43181).
 - Post the exact URL at the top of the PR description and in a PR comment. Cursor preview tunnel, cloudflared quick tunnel, or similar.
+- The human walks `/` and the five desks: `/ops/wellness`, `/ops/diagnostic`, `/ops/unnaturalfertility`, `/ops/cosmetic`, `/ops/stimulants`.
 - Do not invent a production host. This hub has none yet.
 - Do not merge. Do not deploy until Devo says merge and deploy.

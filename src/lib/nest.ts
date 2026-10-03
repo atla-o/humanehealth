@@ -23,18 +23,11 @@ export type ClinicDesk = {
   whenRequired: boolean;
 };
 
-export const clinicArms: ClinicArm[] = [
-  {
-    name: "Acashi",
-    role: "Insurance nest. Own repo.",
-    links: [
-      { label: "Site", href: "https://acashi.devoutshaman.com" },
-      { label: "Repo", href: "https://github.com/atla-o/acashi" },
-    ],
-  },
+/** Own-repo products. Not screens in this app. */
+export const linkedProducts: ClinicArm[] = [
   {
     name: "Phenomatch",
-    role: "Phenotype matching. Own repo.",
+    role: "Phenotype matching. Own repo. Not a screen here.",
     links: [
       { label: "Site", href: "https://phenomatch.devoutshaman.com" },
       { label: "Repo", href: "https://github.com/atla-o/phenomatch" },
@@ -42,7 +35,7 @@ export const clinicArms: ClinicArm[] = [
   },
   {
     name: "Antiporn",
-    role: "Content filter. Own repo.",
+    role: "Content filter. Own repo. Not a screen here.",
     links: [
       { label: "Site", href: "https://antiporn.devoutshaman.com" },
       { label: "Repo", href: "https://github.com/atla-o/antiporn" },
@@ -50,23 +43,35 @@ export const clinicArms: ClinicArm[] = [
   },
   {
     name: "Lessfret",
-    role: "Coaching and care coordination. Own repo.",
+    role: "Coaching and care coordination. Own repo. Not a screen here.",
     links: [
       { label: "Site", href: "https://lessfret.devoutshaman.com" },
       { label: "Repo", href: "https://github.com/atla-o/lessfret" },
     ],
   },
+];
+
+/**
+ * Nested under Humanehealth. Not investor tops and not this UI.
+ * Acashi has its own repo. devoutshaman has no atla-o repo and no product host here.
+ */
+export const nested = [
+  {
+    name: "Acashi",
+    role: "Insurance nest. Own repo. Not a peer top and not a screen in this app.",
+    href: "https://github.com/atla-o/acashi",
+  },
   {
     name: "devoutshaman",
-    role: "Consumer sell-health nest (edible/medicine). Not an investor top. No public repo, and devoutshaman.com is the Devo holding lander, so this hub does not link a product host.",
-    links: [],
+    role: "Consumer sell-health nest (edible/medicine). Not a peer top and not a screen in this app. No atla-o/devoutshaman repo. devoutshaman.com is the Devo holding lander, not this product.",
+    href: null,
   },
-];
+] as const;
 
 export const investorTops: InvestorTop[] = [
   {
     name: "Arcada",
-    role: "Social club. Recreation studios stay there.",
+    role: "Social club. Recreation stays in that repo, not this one.",
     links: [{ label: "Repo", href: "https://github.com/atla-o/arcada" }],
   },
   {
@@ -135,12 +140,9 @@ export function nestMap() {
     parent: "Devo Holdings",
     hub: "Humanehealth",
     investorTops,
-    clinicArms,
+    nested,
+    linkedProducts,
     clinicDesks,
-    recreation: {
-      home: "Arcada",
-      note: "Recreation studios stay under Arcada, not this clinic.",
-      href: "https://github.com/atla-o/arcada",
-    },
+    notInThisUi: ["recreation", "Acashi", "devoutshaman"],
   };
 }

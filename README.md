@@ -1,8 +1,10 @@
 # Humanehealth
 
-Devo clinic network hub. Publisher: [atla-o](https://github.com/atla-o).
+Devo clinic hub. Publisher: [atla-o](https://github.com/atla-o).
 
-Investor tops: Arcada, Lightround, Humanehealth, Mattercircle. Clinic arms (own repos): Acashi, Phenomatch, Antiporn, Lessfret, and devoutshaman as the consumer sell-health nest. Unnaturalfertility is a clinic desk here, not a peer hub. Recreation studios stay on Arcada.
+This app is five clinic desks: schedule wellness, invasive diagnostic, unnaturalfertility, cosmetic restoration, and concentrated stimulants. Unnaturalfertility is a desk here, not a peer hub.
+
+Acashi (insurance) and devoutshaman (sell-health) are nested under Humanehealth. They are not peer tops and they are not screens in this app. Recreation stays in Arcada.
 
 ```bash
 npm ci
