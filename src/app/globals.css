@@ -1,0 +1,224 @@
+:root {
+  color-scheme: light only;
+  --paper: #ffffff;
+  --ink: #000000;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root,
+  html,
+  body {
+    color-scheme: light only;
+    background: #ffffff;
+    color: #000000;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  color-scheme: light only;
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  font-size: 1.05rem;
+  line-height: 1.45;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  opacity: 0.65;
+}
+
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+header,
+footer,
+main {
+  width: min(100% - 2rem, 42rem);
+  margin-inline: auto;
+}
+
+header {
+  padding-block: 1.25rem 0.5rem;
+}
+
+.mark {
+  font-weight: 650;
+  text-decoration: none;
+  letter-spacing: -0.02em;
+}
+
+main {
+  flex: 1;
+  padding-bottom: 2.5rem;
+}
+
+footer {
+  padding-bottom: 1.25rem;
+  font-size: 0.85rem;
+}
+
+h1,
+h2 {
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0.2rem 0 0.4rem;
+}
+
+h2 {
+  font-size: 1.15rem;
+  margin: 0 0 0.75rem;
+}
+
+.kicker {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 650;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.lede {
+  margin-top: 0;
+}
+
+section {
+  margin-top: 2rem;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.card {
+  border: 1px solid var(--ink);
+  padding: 0.8rem 0.9rem;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.card h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.05rem;
+}
+
+.card p {
+  margin: 0;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  margin-top: 0.55rem;
+}
+
+.desk-link {
+  display: block;
+  text-decoration: none;
+}
+
+.desk-link strong {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+form {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1rem 0 1.5rem;
+}
+
+label {
+  display: grid;
+  gap: 0.25rem;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+  color: #000000;
+  background: #ffffff;
+  color-scheme: light only;
+  border: 1px solid #000000;
+  border-radius: 0;
+  padding: 0.45rem 0.55rem;
+}
+
+button {
+  justify-self: start;
+  cursor: pointer;
+}
+
+.banner {
+  border: 1px solid #000000;
+  padding: 0.55rem 0.7rem;
+}
+
+.banner.error {
+  border-style: dashed;
+}
+
+.empty {
+  margin: 0;
+}
+
+.queue {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.queue li {
+  border-top: 1px solid #000000;
+  padding-top: 0.45rem;
+}
+
+.meta {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.85rem;
+}
+
+.skip {
+  position: absolute;
+  left: -999px;
+}
+
+.skip:focus {
+  left: 1rem;
+  top: 1rem;
+  background: #ffffff;
+  color: #000000;
+  padding: 0.4rem 0.6rem;
+  z-index: 2;
+}
