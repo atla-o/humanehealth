@@ -35,6 +35,11 @@ body {
   flex-direction: column;
 }
 
+body:has(.home) {
+  height: 100dvh;
+  overflow: hidden;
+}
+
 a {
   color: inherit;
 }
@@ -57,6 +62,7 @@ main {
 
 header {
   padding-block: 1.25rem 0.5rem;
+  text-align: center;
 }
 
 .mark {
@@ -67,7 +73,62 @@ header {
 
 main {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
   padding-bottom: 2.5rem;
+}
+
+body:has(.home) main {
+  padding-bottom: 0.6rem;
+}
+
+.home {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.home h1 {
+  margin: 0 0 0.35rem;
+  font-size: 1.35rem;
+}
+
+.home .list {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.home .list > li {
+  flex: 0 0 auto;
+  display: flex;
+}
+
+.home .card {
+  padding: 0.2rem 0.7rem;
+}
+
+.home .card h3 {
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.home .desk-link {
+  flex: 1;
+  min-height: 2.15rem;
+  align-items: center;
+  text-align: center;
+}
+
+.home .desk-link strong {
+  text-decoration: none;
 }
 
 footer {
@@ -141,7 +202,10 @@ section {
 }
 
 .desk-link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 3.25rem;
   text-decoration: none;
 }
 
